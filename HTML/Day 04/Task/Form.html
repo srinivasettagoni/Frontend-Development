@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration  Form</title>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+    <form action="submit">
+        <fieldset>
+            <legend>Personal Information</legend>
+        <label for="name">Name :</label>
+        <input type="text" name="user" id="name">
+        <br>
+        <label for="password">Password :</label>
+        <input type="password" name="password">
+        <br>
+        <label for="gender">Gender :</label>
+        <input type="radio" name="gender"> <label >Male</label>
+        <input type="radio" name="gender"> <label >Female</label>
+        <br>
+        <label>Hobbies :</label>
+        <input type="checkbox" name="read"> <label> Reading</label>
+        <input type="checkbox" name="travel"> <label> Travelling</label>
+        <input type="checkbox" name="sport"> <label> Sports</label>
+    </fieldset>
+    <fieldset>
+        <legend>Contact Information</legend>
+        <label for="email">Email : </label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="phone">Phone :</label>
+        <input type="tel" name="phone" id="phone">
+        <br>
+        <label for="address">Address :</label>
+      <textarea name="address" id="address" cols="50" rows="5"></textarea>
+      <br>
+      <label for="Country">Country : </label>
+      <select name="country" id="country">
+        <option value="ind">India</option>
+        <option value="us">United States</option>
+        <option value="uk">Canada</option>
+      </select>
+    </fieldset>
+    <input type="submit">
+    <button type="submit">Reset</button>
+    </form>
+</body>
+</html>

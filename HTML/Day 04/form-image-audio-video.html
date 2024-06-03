@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms,Images and Audio & Video</title>
+</head>
+<body>
+        <form action="">
+            <fieldset>
+                <legend>Personal Details</legend>
+            <label>Name : </label>
+            <input type="text" name="user" id="name">
+            <br><br>
+            <label for="password">Password :</label>
+            <input type="text" name="password" id="password">
+            <br><br>
+            <p>Gender</p>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female">
+            <label for="other">Others</label>
+            <input type="radio" name="gender" id="other">
+            <br><br>
+            <p>Hobbies :</p>
+            <label for="read">Reading</label>
+            <input type="checkbox" >
+            <label for="travel">Travelling</label>
+            <input type="checkbox">
+            <br><br>
+            <p>Choose your Country</p>
+            <select name="country" id="country">
+                <option value="ind">India</option>
+                <option value="uk">Canada</option>
+                <option value="us">United States</option>
+            </select>
+            <br><br>
+           <textarea name="message" id="message" cols="60" rows="10"></textarea>
+            <br><br>
+           <input type="submit">
+           <button type="submit" >Save</button>
+        </fieldset>
+        </form>
+
+        <h2>Images</h2>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWoQPrJvAncDxIlbv-IXDjOL9EEgkUU8qfVw&s" alt="nature" width="500" height="400">
+
+        <h2>Audio</h2>
+        <audio src="./Suttamla Soosi.mp3" controls  loop > </audio> 
+
+        <h2>Video</h2>
+        <video src="" controls autoplay loop ></video>
+</body>
+</html>
