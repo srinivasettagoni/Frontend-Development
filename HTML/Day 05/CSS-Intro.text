@@ -1,0 +1,52 @@
+CSS Introduction
+=================
+CSS stands for Cascading Style Sheets. It is a styling language used to control the layout and appearance
+of web pages written in HTML or XML. CSS is used to separate the presentation of a document from
+its structure, a key concept in web development. This separation of presentation and structure
+makes it easier to maintain and update a website.
+
+CSS is commonly used for: 
+
+1.item Layout and formatting of web pages
+2.item Styling of web pages, including colors, fonts, and backgrounds
+3.item Responsive design, making web pages adapt to different screen sizes and devices
+
+Styles
+======
+1.Inline Styles
+2. Internal Style
+3. External Style / Embedded Style
+
+Selectors
+=========
+1. Universal Selector
+2. Element Selector
+3. Class Selector
+4. ID Selector
+
+psuedo Selector
+================
+1. :hover
+2. :active
+
+------------------
+
+tag name parent > child{
+    property: value;
+}
+eg. ul > li{
+    color: red;
+}
+
+---------------------
+
+attribute type {   
+    property: value;
+}
+eg. input[type="text"]{
+    background-color:red
+}
+
+
+
+
