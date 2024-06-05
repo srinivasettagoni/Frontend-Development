@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <style>
+        /* .container p{
+            color: red;
+        } */
+        /* The child selector (>) selects all elements that are the children of a specified element. */
+        .container > p{
+            color: red;
+        }
+        /* Select direct parent to grand child for first item */
+        /* The + selector is used to select an element that is directly after another specific element. */
+        /* .container + p{
+            color: blue;
+        } */
+        /* Select complete paragraph tag after the parent  */
+        .container ~ p{
+            color: blue;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <div>
+            <p>Paragraph 6 (Inside another div)</p>
+        </div>
+        <p>Paragraph 3</p>
+    </div>
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+</body>
+</html>
