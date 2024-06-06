@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Quries</title>
+    <style>
+        .parent{
+            background-color: green;
+            width: 800px;
+            display: inline-block
+        }
+        .child{
+            background-color: red;
+            width: 400px;
+            display: inline-block;
+        }
+      
+        @media screen and (max-width: 367px){
+            .parent{
+                background-color: yellow;
+            }
+            .child{
+                background-color: blue;
+
+            }
+        }
+        @media screen and  (min-width:767px) and (max-width: 1367px){
+            .parent{
+                background-color: purple;
+            }
+            .child{
+                background-color: orange;
+
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+        <h3>Parent div</h3>
+    </div>
+    <div class="child">
+        <h3>Child div</h3>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .responsive{
+            background-color: black;
+            color: white;
+            padding: 1px;
+        }
+        .side{
+            background-color: orange;
+            display: inline-block;
+            width: 30%;
+        }
+        .main{
+            background-color: blue;
+            display: inline-block;
+            width: 60%;
+        }
+        .footer{
+            background-color: black;
+            color: white;
+            padding: 1px;
+        }
+ 
+        @media screen and (min-width : 320px) and (max-width:587px){
+         
+            .side{
+                background-color: greenyellow;
+                display: block;
+                padding: 1px;
+                margin: 5px;
+               width: 90%;
+            }
+            .main{
+                background-color: greenyellow;
+                display:block;
+                padding: 1px;
+                margin: 5px;
+                width: 90%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="responsive"><h2>Responsive Layout</h2></div>
+    <div class="side"><p>Side bar Content</p></div>
+    <div class="main">  <p>Main Content</p></div>
+    <div class="footer"> <h4>Footer</h4></div>
+</body>
+</html>
