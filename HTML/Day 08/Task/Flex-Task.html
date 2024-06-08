@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <style>
+        .nav-bar{
+            background-color: black;
+            display: flex;
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-items ul{
+            display: flex;
+            list-style: none;
+    
+        }
+        li{
+            margin-right: 20px;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <div>
+            <h4>Logo</h4>
+        </div>
+        <div class="nav-items">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div>
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      
+      .header {
+        background-color: #333;
+        color: #fff;
+        /* padding: 20px; */
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .widget-items {
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px 200px;
+        grid-template-rows: 500px ; 
+       grid-row-gap: 20px;
+       grid-column-gap: 20px;
+      }
+      .sidebar {
+        background-color: #333;
+        color: #fff;
+        /* grid-row-start: 1;
+        grid-row-end: 2; */
+      }
+
+      .widget{
+        background-color: rgb(57, 201, 57);
+        color: #fff;
+      
+      }
+      
+      .footer {
+        background-color: #333;
+        color: #fff;
+        margin-top: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">Header</div>
+    <div class="widget-items">
+      <div class="sidebar">Sidebar</div>
+      <div class="widget">Widget 1</div>
+      <div class="widget">Widget 2</div>
+      <div class="widget">Widget 3</div>
+      <div class="widget">Widget 4</div>
+    </div>
+    <div class="footer">Footer</div>
+  </body>
+</html>
