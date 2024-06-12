@@ -32,5 +32,3 @@ var message = "Welcome Friend"
 
 // console.log(num)
 
-// var data1 = null;
-// console.log(data1)
