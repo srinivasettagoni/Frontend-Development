@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Inline event Handler -->
+    <!-- <button onclick= "console.log('Inline Event Triggered')">In line Event</button> -->
+
+    <!-- Property Handler Event -->
+    <button id="prop-button"> Property Event </button>
+
+    <!-- Add event listener -->
+    <button id="add-event-button">Add Event Listener</button>
+
+    <form action="" id="form-event">
+        <input type="text" id="user-name">
+        <input type="submit">
+    </form>
+    <h1 id="storeData"></h1>
+    <script>
+        var propButton = document.getElementById("prop-button");
+        propButton.onclick = function(){
+            console.log("Property base Event is Triggered")
+        }
+
+        var addEventButton = document.getElementById("add-event-button");
+        addEventButton.addEventListener("click", function(){
+            console.log(event.type)
+            console.log(event.target.id)
+            console.log("Add Event Listener is triggered")
+        })
+
+        addEventButton.addEventListener("mouseover", function(){
+            addEventButton.style.backgroundColor = "blue"
+            console.log("Add Event Listener Mouse over is triggered")
+        })
+        addEventButton.addEventListener("mouseout", function(){
+            addEventButton.style.backgroundColor =""
+            console.log("Add Event Listener Mouse out is triggered")
+        })
+        
+        addEventButton.addEventListener("keydown", function(event){
+            console.log(event)
+            console.log("Add Event Listener Key Down is triggered " + event.key)
+        })
+
+        // Form Event
+        var formEvent = document.getElementById("form-event");
+        formEvent.addEventListener("click",function(event){
+            event.preventDefault();
+            var name = document.getElementById("user-name").value;
+            var store = document.getElementById("storeData");
+
+            var newElement = document.createElement('h2');
+            var listedElement =  store.appendChild(newElement);
+
+            listedElement.textContent = name;
+            console.log("Submit event is triggered");
+        })
+    </script>
+</body>
+</html>

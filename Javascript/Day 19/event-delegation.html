@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Evenet Delegation is giving the parent element 
+      service to the child elements here when we click on li tags the out put
+      Li tag is triggered -->
+    <div>
+        <ul id="list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+    <button id="button-tag"> Add Item</button>
+    <script>
+        var ulTag = document.getElementById('list')
+        ulTag.addEventListener('click',function(event){
+            console.log(event.target)
+            console.log("Li tag is triggered")
+        })
+
+        var buttonTag = document.getElementById('button-tag');
+        buttonTag.addEventListener('click',function(){
+        var newElement = document.createElement('li');
+        newElement.textContent = "Item :" + (document.querySelectorAll('#list li').length + 1);
+        ulTag.appendChild(newElement);
+            })
+        
+    </script>
+</body>
+</html>

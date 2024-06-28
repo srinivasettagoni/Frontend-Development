@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Function</h1>
+    <h1 id="function">Function</h1>
+    <script>
+     var juiceMixer = function (fruit1, fruit2) {
+        var juice = "Juice made with " + fruit1 + " and " + fruit2;
+        console.log(juice);
+        return juice;
+      }
+      
+    //   juiceMixer("Graphes", "Pineapple");
+    //   juiceMixer(5, 4);
+
+     var print =  document.getElementById("function");
+     print.innerHTML = juiceMixer("Apple", "Banana");
+    </script>
+  </body>
+</html>

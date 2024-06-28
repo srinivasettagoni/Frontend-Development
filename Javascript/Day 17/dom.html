@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            background-color: grey;
+            padding-top:20px ;
+            height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Frontend Development</h1>
+    </header>
+    <main>
+        <h2 id="title"></h2>
+        <p class="info"></p>
+        <p> Hello am Paragraph tag </p>
+        <h3 class="info"></h3>
+        <h4 ></h4>
+        <!-- <div class="queryT"></div> -->
+        <p class="queryT"> Paragraph tag in query selector</p>
+        <h2 class="queryT"> h2 Tag in query selector</h2>
+        
+        <ul id="course">
+            <li>HTML</li>
+        </ul>
+
+        <div id="parent">
+            <div id="child"> This is Div Child Element</div>
+        </div>
+
+    </main>
+    <script>
+        // Accessing Element :
+        // ========================
+        // document.getElementById
+        // document.getElementsByClassName
+        // document.getElementsByTagName
+        // document.querySelector
+        // document.querySelectorAll
+
+        // Changing Element:
+        // ===================
+        // textContent
+        // innerHTML 
+        // style.color 
+
+        // Creating Element 
+        // =================
+            // document.createElement
+            // appendChild()
+            // removeChild()
+
+         var titleTag = document.getElementById("title");
+        titleTag.textContent = "Hello Javascript";
+
+        var infoTag = document.getElementsByClassName("info");
+        infoTag[1].textContent = "Am Paragraph Tag";
+
+        var h1Tag = document.getElementsByTagName("h4")
+        h1Tag[0].textContent = "Detail view of Tag Name"
+
+        var queryTag = document.querySelector(".queryT");
+        queryTag.innerHTML = "<h1> Hight Light Content</h1>"
+
+        var queryAllTag =  document.querySelectorAll("p");
+        for(var i =0;i<queryAllTag.length;i++){
+            queryAllTag[i].style.color ="blue";
+        }
+
+        var createLiTag = document.createElement("li");
+        createLiTag.textContent = "CSS";
+        course.appendChild(createLiTag)
+
+        var parentTag = document.getElementById("parent");
+        var childTag = document.getElementById("child");
+        parentTag.removeChild(childTag)
+
+
+        // OR 
+
+    //     <body>
+    // <h1>Education Details</h1>
+
+    // <table>
+    //     <tr id="tablerow">
+            
+    //     </tr>
+    //     <tr id="tabledata1">
+            
+    //     </tr>
+    //     <tr id="tabledata2">
+            
+    //     </tr>
+    // </table>
+
+    // <script>
+    //     var tablerow = document.getElementById("tablerow");
+    //     var headers = ["S. No", "College Name", "Score", "Passed Out"];
+
+    //     for (var i = 0; i < headers.length; i++) {
+    //         var th = document.createElement("th");
+    //         th.textContent = headers[i];
+    //         tablerow.appendChild(th);
+    //     }
+
+    //     var tabledata1 = document.getElementById("tabledata1");
+    //     var data1 = ["1", "Badruka College", "100%", "2024"];
+
+    //     for (var i = 0; i < data1.length; i++) {
+    //         var td = document.createElement("td");
+    //         td.textContent = data1[i];
+    //         tabledata1.appendChild(td);
+    //     }
+
+    //     var tabledata2 = document.getElementById("tabledata2");
+    //     var data2 = ["2", "Another College", "95%", "2023"];
+
+    //     for (var i = 0; i < data2.length; i++) {
+    //         var td = document.createElement("td");
+    //         td.textContent = data2[i];
+    //         tabledata2.appendChild(td);
+    //     }
+    </script>
+</body>
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            background-color: blue;
+            width: 600px;
+            height: 600px;
+        }
+        #middle{
+            background-color: grey;
+            width: 400px;
+            height: 400px;
+            margin: 100px;
+        }
+        #inner{
+            background-color: red;
+            width: 200px;
+            position: absolute;
+            margin: 100px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="middle">
+            <div id="inner"> Click me</div>
+        </div>
+    </div>
+    <script>
+        var innerTag = document.getElementById('inner');
+        innerTag.addEventListener('click',function(event){
+            console.log('Inner tag is triggered')
+            event.stopPropagation()
+        })
+        var middleTag = document.getElementById('middle');
+        middleTag.addEventListener('click',function(event){
+            // alert('Alert Middle message Displayed')
+            console.log('Middle tag is triggered');
+            event.stopPropagation()
+        })
+        var outerTag = document.getElementById('outer');
+        outerTag.addEventListener('click',function(event){
+            // alert('Alert Outer  message Displayed')
+            console.log('Outer tag is triggered');
+            event.stopPropagation()
+        })
+    </script>
+</body>
+</html>
