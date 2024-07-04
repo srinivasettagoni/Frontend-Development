@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Task 1: Create a Vehicle constructor function with a method start that returns "Vehicle started". 
+// Then create a Car constructor function that inherits from Vehicle and adds a method drive that returns 
+// "Car is driving".
+
+// Step 1: Define the Vehicle constructor function and its start method
+// function Vehicle() {}
+
+// Vehicle.prototype.start = function() {
+//     return "Vehicle started";
+// };
+
+// // Step 2: Define the Car constructor function and inherit from Vehicle
+// function Car(position) {
+//     Vehicle.call(this); // Call the Vehicle constructor function
+//     this.position = position;
+// }
+
+// // Inherit from Vehicle
+// Car.prototype = Object.create(Vehicle.prototype);
+// Car.prototype.constructor = Car;
+
+// // Add the drive method to Car's prototype
+// Car.prototype.drive = function() {
+//     return "Car is driving";
+// };
+
+// // Create an instance of Car
+// let car1 = new Car("New York");
+
+// console.log(car1); // Output: Car { position: 'New York' }
+// console.log(car1.start()); // Output: Vehicle started
+// console.log(car1.drive()); // Output: Car is driving
+
+
+// Task 2: Create a Person object with properties name and age, and a method greet that returns a greeting
+//  message. Use Object.create to create a new object student that inherits from Person and add a study method 
+//  to student.
+
+// Define the Person object with properties and methods
+const Person = {
+    name: 'Default Name',
+    age: 0,
+    greet: function() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+    }
+};
+
+// Use Object.create to create a new object student that inherits from Person
+const student = Object.create(Person);
+
+// Add properties to student
+student.name = 'Alice';
+student.age = 20;
+
+// Add the study method to student
+student.study = function() {
+    return `${this.name} is studying.`;
+};
+
+// Test the implementation
+console.log(student.greet()); // Output: Hello, my name is Alice and I am 20 years old.
+console.log(student.study()); // Output: Alice is studying.
+
+    </script>
+</body>
+</html>

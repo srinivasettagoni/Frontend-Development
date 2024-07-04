@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         Task 1: Create a Car class with properties make, model, and year. Add a method start that returns "The car has
+//  started." Then, create a ElectricCar class that inherits from Car and adds a property batteryLevel and a method 
+//  charge that returns "The car is charging."
+
+// class Car{
+//     constructor(make,model,year){
+//        this.make = make;
+//        this.model = model;
+//        this.year = year;
+//     }
+//     start(){
+//         return `The Car has Started.`
+//     }
+// }
+
+// class ElectricCar extends Car{
+//     constructor(make,model,year,batteryLevel){
+//         super(make,model,year)
+//        this.batteryLevel = batteryLevel;
+//     }
+//     change(){
+//         return `The Car is Charging.`
+//     }
+// }
+
+// // let car1 = new Car("");
+// // console.log(car1)
+
+// let electricCar = new ElectricCar("Tesla","Model",2022,80);
+// console.log(electricCar.start())
+// console.log(electricCar.change())
+
+
+// Task 2: Create a Rectangle class with properties width and height. Add a method area that returns the area of the 
+// rectangle. Then, create a Square class that inherits from Rectangle and overrides the area method to correctly 
+// calculate the area of a square.
+
+
+class Rectangle {
+    constructor(width,height){
+        this.width = width;
+        this.height = height;
+    }
+    area(){
+        return this.width * this.height
+    }
+   
+}
+// Define the Square class that inherits from Rectangle
+class Square extends Rectangle{
+    constructor(sideLength){
+        super(sideLength,sideLength)
+               
+    }
+    area(){
+        return this.width * this.height
+    }
+}
+let rectangle1 = new Rectangle(10,20)
+console.log(rectangle1.area())
+
+let mySquare = new Square(4);
+console.log(mySquare.area());
+console.log(mySquare)
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!-- // Task 1: Fetch and Display User Data
+// Description:
+// Fetch data from a public API and display it on the webpage. Use the Fetch API to get user information and handle any potential errors.
+
+// Steps:
+// Fetch user data from https://jsonplaceholder.typicode.com/users.
+// Parse the response as JSON.
+// Display the user names and email addresses in a list on the webpage.
+// Handle any errors that occur during the fetch operation.
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h2 id="print"></h2>
+    <script>
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res)=>{
+            if(res.ok){
+                console.log("This is Error")
+            }else{
+                console.log("failed to load error")
+            }
+            // console.log(res.json())
+            return res.json()
+        })
+        .then((data)=>{
+            console.log(data)
+            return data.map((value)=>{
+                   console.log(value.address);
+             let printData = document.getElementById("print");
+                   let newElement = document.createElement('p');
+                   newElement.innerHTML = 
+                   `Username : ${value.username}
+                    Email : ${value.email}
+                    City : ${value.address.city}`;
+                    printData.appendChild(newElement)
+            })
+        }).catch((error)=>{
+            console.log(error)
+        })
+    </script>
+ </body>
+ </html>

@@ -1,0 +1,70 @@
+<!-- 
+Task 2: Post Data to an API
+Description:
+Create a form to collect user input and post the data to a public API using the Fetch API. Display the response from the server on the webpage.
+
+Steps:
+Create a simple HTML form with fields for title and body.
+When the form is submitted, use the Fetch API to send the data to https://jsonplaceholder.typicode.com/posts using a POST request.
+Display the server's response on the webpage.
+Handle any errors that occur during the fetch operation. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+    <input type="text" placeholder="First" id="title"><br>
+    <input type="text"placeholder="Middle" id="body"><br>
+    <input type="text" placeholder="Last"><br>
+    <input type="text" placeholder="number"><br>
+    <button type="submit">submit</button>
+</form>
+<div id="response"></div>
+<div id="error"></div>
+<script>
+    document.addEventListener('DOMContentLoaded',()=>{
+        let formData = document.getElementById('form')
+        let responseDiv = document.getElementById('response');
+        let errorMessage = document.getElementById('error');
+
+        form.addEventListener('submit',(event)=>{
+            event.preventDefault();
+
+            let title = document.getElementById('title');
+            let body = document.getElementById('body');
+
+            fetch('https://jsonplaceholder.typicode.com/posts',
+               {
+                method:'POST',
+                headers:{
+                    "content-type" :"application/json",
+                },
+                body: JSON.stringify({
+                    title:title,
+                    body:body,
+                    userId : 1 //Assuming useerID 1 for this example
+                })
+               }
+            ).then((res)=>{
+                if(!res.ok){
+                    throw new Error('Network Responce was not ok' + res.statusText)
+                }
+                return res.json()
+                }
+            ).then((data)=>{
+                responseDiv.innerHTML = `${JSON.stringify(data,null,2)}`
+            }).catch(()=>{
+                errorMessage.textContent = `Error: ${error.message}`      
+             })
+        })
+    })
+  
+</script>
+</body>
+</html>
