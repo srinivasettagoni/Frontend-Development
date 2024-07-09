@@ -1,0 +1,11 @@
+.train-info{
+    color:red;
+    width: 500px;
+    padding: 50px;
+    box-shadow: 0px 0px 10px black;
+    margin: 50px auto;
+}
+button{
+    margin-top: 50px;
+    padding: 5px;
+}

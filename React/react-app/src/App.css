@@ -1,0 +1,22 @@
+.nav-bar{
+  background-color: rgb(148, 241, 148);
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  align-items: center;
+}
+.nav-links{
+  background-color: rgb(76, 76, 185);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.logo img{
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+}
+.nav-links:hover{
+  background-color: blue;
+}

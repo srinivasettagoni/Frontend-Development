@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script  src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <div id="root"></div>
+    <script type="text/babel">
+      // let newReactElement = React.createElement('h2',{id:'h2Id',style:{color:"red"}},"Hello react js ");
+      // let newReactElement = React.createElement('h2',{id:'h2Id',style:{color:"red"}},"Hello react js ",React.createElement('h2',{id:'h2Id',style:{color:"red"}},"Hello react js "));
+
+    //   let newReactElement = React.createElement(
+    //     "h2",
+    //     { id: "h2Id", style: { color: "red" } },
+    //     "Hello react js "
+    //   );
+
+      // console.log(newReactElement)
+
+      // ReactDOM.render(newReactElement,document.getElementById("root"))
+
+      let reuseElement = ()=>{
+        let h2Jsx = 
+        <>
+         <h2 id="h2Jsx" style={{ color: "blue" }}>
+             Hello React Js JSX
+        </h2>
+        <div>This is JSX</div>
+        <h1 style={{color:"red"}}>Hello JSX Fragment</h1>
+        </>
+        return h2Jsx
+      }
+      
+      let mainElement = ()=>{
+
+        let createH2 = <>
+         <div> {reuseElement()}</div>
+         <div> {reuseElement()}</div>
+         <div> {reuseElement()}</div>
+         </>
+        ReactDOM.render(createH2,
+        document.getElementById("root")
+      );
+
+      }
+      mainElement()
+
+     
+    //   ReactDOM.render(
+    //     <h2 id="h2Jsx" style={{ color: "blue" }}>
+    //          Hello React Js JSX
+    //     </h2>,
+    //     document.getElementById("root")
+    //   );
+    </script>
+  </body>
+</html>
