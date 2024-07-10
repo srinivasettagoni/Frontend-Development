@@ -1,15 +1,20 @@
 import './App.css';
-import FunctionBased  from './Component/FunctionBased';
+// import FunctionBased  from './Component/FunctionBased';
 import ClassBased from './Component/ClassBased';
-import StateManage from './Component/Hook/StateManage';
-import Counter from './Component/Hook/Task/Counter.js'
-import Groceries from './Component/InventoryDashboard/Groceries.js';
-import ListItem from './Component/InventoryDashboard/ListItems.js';
-import TaskInputSubmit from './Component/InventoryDashboard/TaskInputSubmit.js';
+// import StateManage from './Component/Hook/StateManage';
+// import Counter from './Component/Hook/Task/Counter.js'
+// import Groceries from './Component/InventoryDashboard/Groceries.js';
+// import ListItem from './Component/InventoryDashboard/ListItems.js';
+// import TaskInputSubmit from './Component/InventoryDashboard/TaskInputSubmit.js';
 import Electronics from './Component/InventoryDashboard/Electronics.js';
+import ComputerAccessories from './Component/InventoryDashboard/ComputerAccessories.js';
+import Stand from './Component/InventoryDashboard/Stand.js';
+import { useState } from 'react';
+import Count from './Component/Hook/Count.js';
 
 function App() {
-
+ 
+  let [state,setState] = useState(false)
 
   return(
     <div>
@@ -23,7 +28,16 @@ function App() {
       <div href="#" className='nav-links'>Home</div>
       <div href="#" className='nav-links'>Home</div>
     </div>
-    <Electronics/>
+    {/* <Electronics/> */}
+    {/* // <ComputerAccessories/> */}
+    {/* // <Stand/> */}
+    <Count/>
+    {/* {state ?  <ComputerAccessories/> : <Stand/>}
+    <div className='train-info'>
+
+    <button  onClick={()=>setState(true)}>ComputerAccessories</button>
+  <button onClick={()=>setState(false)}>Stand</button>
+  </div> */}
     </div>
   )
   // //Conditional Rendering

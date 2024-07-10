@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Electronics.css";
 
 function Electronics() {
@@ -15,6 +15,7 @@ function Electronics() {
     },
   ]);
 
+
   let getElectronics = () => {
     // console.log("This is Electronis")
     fetch("https://fakestoreapi.com/products/category/electronics")
@@ -27,6 +28,9 @@ function Electronics() {
         return setElectronics(data);
       });
   };
+  // useEffect(()=>{
+  //   getElectronics()
+  // })
   return (
     <div className="container">
     <div className="electronics-container">
