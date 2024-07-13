@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../../Component/ClassBased.css";
 
 function Count() {
-    let stopCount 
+    // let obj = useRef();
+    // console.log(obj)    //{current: undefined}
+    let stopCount = useRef() // returns only one obj with only one property called current
     console.log(stopCount)
   let [count, setCount] = useState(0);
   let handleCount = () => {
     // console.log(count)
-  stopCount = setInterval(() => {
+  stopCount.current = setInterval(() => {
       setCount((prevCount) => prevCount + 1);
       console.log(count)
     }, 1000);
-    console.log(`This is setOnterval ${stopCount}`)
+    console.log(`This is setInterval ${stopCount.current}`)
   };
   let handleStop = ()=>{
-    console.log(`Stopped ${stopCount}`)
-    clearInterval(stopCount)
+      console.log(`Stopped ${stopCount.current}`)
+      clearInterval(stopCount.current)
   }
 
 //   useEffect(() => {
