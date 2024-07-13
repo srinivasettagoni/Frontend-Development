@@ -6,16 +6,18 @@ import ClassBased from './Component/ClassBased';
 // import Groceries from './Component/InventoryDashboard/Groceries.js';
 // import ListItem from './Component/InventoryDashboard/ListItems.js';
 // import TaskInputSubmit from './Component/InventoryDashboard/TaskInputSubmit.js';
-import Electronics from './Component/InventoryDashboard/Electronics.js';
-import ComputerAccessories from './Component/InventoryDashboard/ComputerAccessories.js';
-import Stand from './Component/InventoryDashboard/Stand.js';
+// import Electronics from './Component/InventoryDashboard/Electronics.js';
+// import ComputerAccessories from './Component/InventoryDashboard/ComputerAccessories.js';
+// import Stand from './Component/InventoryDashboard/Stand.js';
 import { useState } from 'react';
-import Count from './Component/Hook/Count.js';
-import RefObj from './Component/Hook/RefObj.js';
-import SalesReport from './Component/SalesDashboard/SalesReport.js';
-import MonthlySalesReport from './Component/SalesDashboard/MonthlySalesReport.js';
-import UseReducer from './Component/Hook/UseReducer.js';
-import QuaterlySalesReport from './Component/SalesDashboard/QuaterlySalesReport.js';
+// import Count from './Component/Hook/Count.js';
+// import RefObj from './Component/Hook/RefObj.js';
+// import SalesReport from './Component/SalesDashboard/SalesReport.js';
+// import MonthlySalesReport from './Component/SalesDashboard/MonthlySalesReport.js';
+// import UseReducer from './Component/Hook/UseReducer.js';
+// import QuaterlySalesReport from './Component/SalesDashboard/QuaterlySalesReport.js';
+// import UseMemo from './Component/Hook/UseMemo.js'
+  import UseCallBack from  './Component/Hook/UseCallback/UseCallBack.js'
 
 function App() {
  
@@ -42,6 +44,9 @@ function App() {
     {/* <MonthlySalesReport/> */}
     {/* <UseReducer/> */}
     {/* <QuaterlySalesReport/> */}
+    {/* <UseMemo/> */}
+    <UseCallBack/>
+
     {/* {state ?  <ComputerAccessories/> : <Stand/>}
     <div className='train-info'>
 
