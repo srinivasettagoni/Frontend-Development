@@ -1,0 +1,15 @@
+.dmart-info{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+   
+}
+.dmart-info img{
+    width:700px;
+    height: 200px;
+}
+.dmart-info h1{
+    color: rgb(40, 204, 40);
+}

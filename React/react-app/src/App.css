@@ -11,6 +11,8 @@
   border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
+  color: aliceblue;
+  text-decoration: none;
 }
 .logo img{
   width: 70px;

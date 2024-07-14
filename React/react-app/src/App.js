@@ -1,85 +1,63 @@
-import './App.css';
-// import FunctionBased  from './Component/FunctionBased';
-import ClassBased from './Component/ClassBased';
-// import StateManage from './Component/Hook/StateManage';
-// import Counter from './Component/Hook/Task/Counter.js'
-// import Groceries from './Component/InventoryDashboard/Groceries.js';
-// import ListItem from './Component/InventoryDashboard/ListItems.js';
-// import TaskInputSubmit from './Component/InventoryDashboard/TaskInputSubmit.js';
-// import Electronics from './Component/InventoryDashboard/Electronics.js';
-// import ComputerAccessories from './Component/InventoryDashboard/ComputerAccessories.js';
-// import Stand from './Component/InventoryDashboard/Stand.js';
-import { useState } from 'react';
-// import Count from './Component/Hook/Count.js';
-// import RefObj from './Component/Hook/RefObj.js';
-// import SalesReport from './Component/SalesDashboard/SalesReport.js';
-// import MonthlySalesReport from './Component/SalesDashboard/MonthlySalesReport.js';
-// import UseReducer from './Component/Hook/UseReducer.js';
-// import QuaterlySalesReport from './Component/SalesDashboard/QuaterlySalesReport.js';
-// import UseMemo from './Component/Hook/UseMemo.js'
-  import UseCallBack from  './Component/Hook/UseCallback/UseCallBack.js'
+import { Routes,Route, Link } from "react-router-dom";
+import "./App.css";
+import Electronics from './Component/InventoryDashboard/Electronics'
+import Groceries from './Component/InventoryDashboard/Groceries.js'
+import ListItems from './Component/InventoryDashboard/ListItems.js'
+import MonthlySalesReport from "./Component/SalesDashboard/MonthlySalesReport.js";
+import Home from "./Component/Home.js";
+import NotFound from "./Component/NotFound.js";
+import Devices from "./Component/Devices.js";
+import ComputerAccessories from './Component/InventoryDashboard/ComputerAccessories.js'
+import PackagedGoods from "./Component/InventoryDashboard/PackagedGoods.js";
+import Stand from './Component/InventoryDashboard/Stand.js'
 
 function App() {
- 
-  let [state,setState] = useState(false)
-
-  return(
+  return (
     <div>
-    <div className='nav-bar'>
-      <div className='logo'>
-        <img src='https://logowik.com/content/uploads/images/dmart-avenue-supermarts4302.jpg' />
+      <div className="nav-bar">
+        <div className="logo">
+          <img src="https://logowik.com/content/uploads/images/dmart-avenue-supermarts4302.jpg" />
+        </div>
+        <Link  to={'/'} className="nav-links">
+          Home
+        </Link>
+      
+        <Link to={"/devices"} className="nav-links">
+          Devices
+        </Link>
+        <Link to={"/groceries"} className="nav-links">
+          Groceries
+        </Link>
+        <Link  to={"/list-item"} className="nav-links">
+          List Items
+        </Link>
+        <Link to={"/monthly-sales-report"} className="nav-links">
+          Monthly report
+        </Link>
+       
       </div>
-      <div href="#" className='nav-links'>Home</div>
-      <div href="#" className='nav-links'>Electronis</div>
-      <div href="#" className='nav-links'>Home</div>
-      <div href="#" className='nav-links'>Home</div>
-      <div href="#" className='nav-links'>Home</div>
+      <Routes>
+      <Route path="*" element={<NotFound/>}/>
+        <Route path="/" element={<Home/>}/>
+        
+        <Route path="/devices" element={<Devices/>}> 
+
+        <Route path="electronics" element={<Electronics/>}/>
+        <Route path="computer-accessories" element={<ComputerAccessories/>}/>
+         </Route>
+       
+        <Route path="/groceries" element={<Groceries/>}>
+          <Route path="packaged-goods" element={<PackagedGoods/>}/>
+          <Route path="stand" element={<Stand/>}/>
+
+        </Route>
+
+
+        <Route path="/list-item" element={<ListItems/>}/>
+        <Route path="/monthly-sales-report" element={<MonthlySalesReport/>}/>
+      </Routes>
     </div>
-    {/* <Electronics/> */}
-    {/* // <ComputerAccessories/> */}
-    {/* // <Stand/> */}
-    {/* <Count/> */}
-    {/* <RefObj/> */}
-    {/* <SalesReport/> */}
-    {/* <MonthlySalesReport/> */}
-    {/* <UseReducer/> */}
-    {/* <QuaterlySalesReport/> */}
-    {/* <UseMemo/> */}
-    <UseCallBack/>
-
-    {/* {state ?  <ComputerAccessories/> : <Stand/>}
-    <div className='train-info'>
-
-    <button  onClick={()=>setState(true)}>ComputerAccessories</button>
-  <button onClick={()=>setState(false)}>Stand</button>
-  </div> */}
-    </div>
-  )
-  // //Conditional Rendering
-  // let stateManagement = true; //Function Component
-
-  // if(stateManagement){
-  //   return <FunctionBased/>
-  // }else{
-  //   return <ClassBased/>
-  // }
-
-  //Ternery Operator
-  // let stateManagement = false;
-  // return stateManagement ? <FunctionBased/> : <ClassBased/>
-
-  // return <StateManage/>
-  // return (
-  //   <div className="App">
-  //     {/* <div>Hello React Component</div> */}
-  //     {/* <FunctionBased/>
-  //     <ClassBased/> */}
-  //     {/* <Counter/> */}
-  //     {/* <Groceries/> */}
-  //     {/* <ListItem/> */}
-  //     <TaskInputSubmit/>
-  //   </div>
-  // );
+  );
 }
 
 export default App;

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import PackagedGoods from "./PackagedGoods";
 import '../../Component/ClassBased.css'
+import { Link, Outlet } from "react-router-dom";
+import './Groceries.css'
 
 let Groceries = ()=>{
     let [grocery,setGrocery] = useState("Sugar");
@@ -19,6 +21,12 @@ let Groceries = ()=>{
         setGroceies(groceryItem)
     }
     return(
+        <div>
+            <div className="groceries-links">
+        <Link to="packaged-goods" className="link">Packaged Goods</Link>
+        <Link to="stand" className="link">Stand Component</Link>
+        </div>
+        <Outlet/>
         <div className="train-info">
             <h1>Groceries Parent</h1>
             <h3>{grocery}</h3>
@@ -26,6 +34,7 @@ let Groceries = ()=>{
             <img src={groceries.image} width={'200px'}height={'200px'}/>
             {/* <PackagedGoods name={grocery}  addToCart ={addToCart}/> */}
             <PackagedGoods name={grocery}  addToCart ={addToCart} groceryName={groceries.name} groceryImage={groceries.image} addingToCart={addingToCart}/>
+        </div>
         </div>
     )
 }

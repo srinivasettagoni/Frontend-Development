@@ -1,4 +1,5 @@
 import './PackagedGoods.css'
+import '../../Component/ClassBased.css'
 let PackagedGoods = (props)=>{
     
    
@@ -13,11 +14,11 @@ let PackagedGoods = (props)=>{
 
     }
     return(
-        <div className="goods">
+        <div className="train-info">
             <h2>PackagedGoods Child </h2>
-            {/* <h1>{props.name}</h1> */}
-            {/* <h1>{props.groceryName}</h1> */}
-            {/* <img src={props.groceryImage} width={"200px"} height={"200px"}/> */}
+            <h1>{props.name}</h1>
+            <h1>{props.groceryName}</h1>
+            <img src={props.groceryImage} width={"200px"} height={"200px"}/>
             <button onClick={adding}>Add cart</button>
         </div>
     )
